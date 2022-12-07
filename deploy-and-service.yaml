@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: sd
-        image: sdproject.azurecr.io/prof2:v1 
+        image: marioafonso10/projetoimg:v1
         ports:
         - containerPort: 3000
 ---
