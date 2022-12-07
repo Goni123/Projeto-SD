@@ -22,4 +22,4 @@ jobs:
 
       - name: Build and push image
         run: |
-          docker buildx build --push --platform linux/arm/v7 --tag marioafonso10/projetoSDTeste .
+          docker buildx build --push --platform linux/arm/v7 --tag marioafonso10/projetosdteste .
