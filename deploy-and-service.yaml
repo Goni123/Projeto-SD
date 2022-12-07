@@ -16,7 +16,6 @@ spec:
     spec:
       containers:
       - name: sd
-
         image: marioafonso10/projetoimg:v1
         ports:
         - containerPort: 3000
