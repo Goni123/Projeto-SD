@@ -18,7 +18,7 @@ jobs:
         uses: docker/login-action@v1
         with:
           username: marioafonso10
-          password: dckr_pat_pELdXKBooOU8UKBtiJGpwiytrwI
+          password: dckr_pat_DsyR4424O72VR1g7IPMuvh4YB1I
 
       - name: Build and push image
         run: |
