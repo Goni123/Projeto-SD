@@ -1,31 +1,31 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: teste
+  name: sd
   labels:
-    app: teste
+    app: sd
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: teste
+      app: sd
   template:
     metadata:
       labels:
-        app: teste
+        app: sd
     spec:
       containers:
-      - name: teste
-        image: marioafonso10/projetoimg:v1
+      - name: sd
+        image: kbaras/projetosd:v1
         ports:
         - containerPort: 3000
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: teste
+  name: sd
   labels:
-    app: teste
+    app: sd
 spec:
   type: LoadBalancer
   ports:
@@ -33,4 +33,4 @@ spec:
     protocol: TCP
     targetPort: 3000
   selector:
-    app: teste
+    app: sd
