@@ -1,0 +1,21 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build & push Image
+      run:
+        echo "${{ secrets.DockerPW}}" | docker login -u "marioafonso10" --password-stdin
+        docker image build -t marioafonso10/projeto:v1 .
+        docker push marioafonso10/projeto:v1
