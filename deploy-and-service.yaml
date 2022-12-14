@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sd
+  name: sd_teste
   labels:
-    app: sd
+    app: sd_teste
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: sd
+      app: sd_teste
   template:
     metadata:
       labels:
-        app: sd
+        app: sd_teste
     spec:
       containers:
-      - name: sd
+      - name: sd_teste
         image: marioafonso10/projetoimg:v1
         ports:
         - containerPort: 3000
@@ -23,9 +23,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: sd
+  name: sd_teste
   labels:
-    app: sd
+    app: sd_teste
 spec:
   type: NodePort
   ports:
@@ -34,4 +34,4 @@ spec:
     targetPort: 3000
     nodePort: 30001
   selector:
-    app: sd
+    app: sd_teste
