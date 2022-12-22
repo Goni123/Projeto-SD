@@ -34,5 +34,7 @@ spec:
     protocol: TCP
     targetPort: 3000
     nodePort: 30001
+    targetPort: 3000
+    protocol: TCP
   selector:
     app: sd_teste
