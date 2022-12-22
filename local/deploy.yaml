@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: teste
+  name: app
   labels:
-    app: teste
+    app: app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: teste
+      app: app
   template:
     metadata:
       labels:
-        app: teste
+        app: app
     spec:
       containers:
-      - name: teste
+      - name: app
         image: marioafonso10/projetoimg:v1
         ports:
         - containerPort: 3000
