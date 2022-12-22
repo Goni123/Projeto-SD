@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: app
-        image: marioafonso10/projetoimg:v1
+        image: kbaras/projetosd:v1
         ports:
         - containerPort: 3000
